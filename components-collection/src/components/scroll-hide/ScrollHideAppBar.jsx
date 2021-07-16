@@ -1,10 +1,12 @@
 import { 
-    makeStyles,  
+    makeStyles,   
     AppBar, Toolbar, 
     IconButton, Button
 } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
+import { Grow } from '@material-ui/core';
+import { useState, useEffect } from 'react';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -22,14 +24,43 @@ const useStyles = makeStyles((theme) => ({
     toolbarMargin: theme.mixins.toolbar
 }));
 
-const FixedPosition = () => { 
+
+
+const ScrollHideAppBar = () => { 
     
     const classes = useStyles();
+
+          
+    
+
+    const [scroll, setScroll] = useState({scrolling: false, scrollTop: 0});
+    const {scrolling, scrollTop} = scroll;
+     
+
+
+    useEffect(() => {
+
+        const onScroll = event => {
+            setScroll({
+                scrollTop: event.target.documentElement.scrollTop,
+                scrolling: event.target.documentElement.scrollTop > scrollTop
+            });
+        };
+
+        window.addEventListener('scroll', onScroll);
+        
+        return () => window.removeEventListener('scroll', onScroll)
+        
+
+    },[scrolling, scrollTop]);
+
+    
 
     return (
 
     <div className={classes.root}>
-      <AppBar position="fixed">
+     <Grow  in={!scrolling} >
+      <AppBar>
        <Toolbar>
          <IconButton 
           className={classes.menuButton}
@@ -48,6 +79,7 @@ const FixedPosition = () => {
          <Button color="inherit">Login</Button>
        </Toolbar>
       </AppBar>
+     </Grow > 
       <div className={classes.toolbarMargin} />
       <ul>
         {new Array(100).fill(null).map((v, i) => (
@@ -58,4 +90,4 @@ const FixedPosition = () => {
 )};
 
 
-export default FixedPosition;
+export default ScrollHideAppBar;

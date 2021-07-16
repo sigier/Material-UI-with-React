@@ -8,7 +8,8 @@ const style = {
 const elements = [
     "breakpoint",
     "spacing",
-    "fixed"
+    "fixed",
+    "scroll"
 ];
  
 
