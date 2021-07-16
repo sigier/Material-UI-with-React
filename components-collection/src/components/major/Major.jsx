@@ -7,7 +7,8 @@ const style = {
 
 const elements = [
     "breakpoint",
-    "spacing"
+    "spacing",
+    "fixed"
 ];
  
 

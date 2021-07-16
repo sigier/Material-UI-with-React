@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch,  Route } from "react-router-dom";
 import  Breakpoint from './components/breakpoints/Breakpoint';
 import  Major from './components/major/Major';
 import JustifyContent from './components/spacing/JustifyContent';
+import FixedPosition from './components/fixed-position/FixedPosition';
 
 function App()  {
   return (
@@ -11,6 +12,7 @@ function App()  {
           <Route exact path='/' component={ Major }/>
           <Route  path='/breakpoint' component={ Breakpoint} />
           <Route  path='/spacing' component={ JustifyContent } />
+          <Route  path='/fixed' component={ FixedPosition } />
         </Switch>
        </Router>
        
