@@ -19,70 +19,74 @@ const JustifyContent = () => {
 
     const classes = useStyles();
 
+    const Item = props => <Grid item {...props}/>;
+
+    const Container = props => <Grid container {...props}/>;
+
     return (
         <div className={classes.root}>
-          <Grid container spacing={10}>
-              <Grid item xs={12} sm={6} md={3}>
+          <Container spacing={10}>
+              <Item xs={12} sm={6} md={3}>
                 <Paper className={classes.paper}>
-                  <Grid container justify="space-between">
-                      <Grid item>
+                  <Container justify="space-between">
+                      <Item>
                         <Chip label="xs=12" />
-                      </Grid>
-                      <Grid item>
+                      </Item>
+                      <Item>
                         <Chip label="sm=6" />
-                      </Grid>
-                      <Grid item>
+                      </Item>
+                      <Item>
                         <Chip label="md=3" />
-                      </Grid>
-                  </Grid>
+                      </Item>
+                  </Container>
                 </Paper>
-              </Grid>
-              <Grid item xs={12} sm={6} md={3}>
+              </Item>
+              <Item xs={12} sm={6} md={3}>
                 <Paper className={classes.paper}>
-                  <Grid container justify="space-between">
-                      <Grid item>
+                  <Container justify="space-between">
+                      <Item>
                         <Chip label="xs=12" />
-                      </Grid>
-                      <Grid item>
+                      </Item>
+                      <Item>
                         <Chip label="sm=6" />
-                      </Grid>
-                      <Grid item>
+                      </Item>
+                      <Item>
                         <Chip label="md=3" />
-                      </Grid>
-                  </Grid>
+                      </Item>
+                  </Container>
                 </Paper>
-              </Grid>
-              <Grid item xs={12} sm={6} md={3}>
+              </Item>
+              <Item xs={12} sm={6} md={3}>
                 <Paper className={classes.paper}>
-                  <Grid container justify="space-between">
-                      <Grid item>
+                  <Container justify="space-between">
+                      <Item>
                         <Chip label="xs=12" />
-                      </Grid>
-                      <Grid item>
+                      </Item>
+                      <Item>
                         <Chip label="sm=6" />
-                      </Grid>
-                      <Grid item>
+                      </Item>
+                      <Item>
                         <Chip label="md=3" />
-                      </Grid>
-                  </Grid>
+                      </Item>
+                  </Container>
                 </Paper>
-              </Grid>
-              <Grid item xs={12} sm={6} md={3}>
+              </Item>
+              <Item xs={12} sm={6} md={3}>
                 <Paper className={classes.paper}>
-                  <Grid container justify="space-between">
-                      <Grid item>
+                  <Container justify="space-between">
+                      <Item>
                         <Chip label="xs=12" />
-                      </Grid>
-                      <Grid item>
+                      </Item>
+                      <Item>
                         <Chip label="sm=6" />
-                      </Grid>
-                      <Grid item>
+                      </Item>
+                      <Item>
                         <Chip label="md=3" />
-                      </Grid>
-                  </Grid>
+                      </Item>
+                  </Container>
                 </Paper>
-              </Grid>
-          </Grid>
+              </Item>
+          </Container>
         </div>
 
     )
