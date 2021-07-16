@@ -5,16 +5,25 @@ const style = {
     'textDecoration': 'none'
 }
 
-const Major = () => (
-     <Button  
-      variant="outlined" 
-      color="primary"
-     >
-        <Link style={style} to="/breakpoint">Breakpoint</Link>
-    </Button>
+const elements = [
+    "breakpoint",
+    "spacing"
+];
+ 
 
-    
-    
+const Major = () => (
+
+    elements.map((element,  i) => (
+        <Button key={i} 
+            variant="outlined" 
+            color="primary"
+        >
+        <Link style={style} to={`/${element}`}>
+            {`${element.toUpperCase()}`}
+        </Link>
+        </Button>
+    ))
+
 );
 
 
