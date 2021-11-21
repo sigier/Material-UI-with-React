@@ -9,7 +9,8 @@ const elements = [
     "breakpoint",
     "spacing",
     "fixed",
-    "scroll"
+    "scroll",
+    "intoolbar"
 ];
  
 

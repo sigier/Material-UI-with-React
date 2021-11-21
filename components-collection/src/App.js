@@ -5,6 +5,7 @@ import  Major from './components/major/Major';
 import JustifyContent from './components/spacing/JustifyContent';
 import FixedPosition from './components/fixed-position/FixedPosition';
 import ScrollHideAppBar from './components/scroll-hide/ScrollHideAppBar';
+import InToolbarMenu from './components/custom-toolbar/InToolbarMenu';
 
 function App()  {
   return (
@@ -15,14 +16,9 @@ function App()  {
           <Route  path='/spacing' component={ JustifyContent } />
           <Route  path='/fixed' component={ FixedPosition } />
           <Route  path='/scroll' component={ ScrollHideAppBar } />
+          <Route  path='/intoolbar' component={ InToolbarMenu } />
         </Switch>
        </Router>
-       
-
-     
-  
-
-    
   );
 }
 
